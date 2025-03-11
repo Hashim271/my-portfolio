@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    padding-bottom: 50px;
 }
 
 header {
@@ -37,8 +38,30 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.grid-item {
+    padding: 15px;
+    border: 3px solid black;
+}
+
+.grid-button {
+    float: right;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    border: solid 4px black;
+    background-color: #393232;
+    border-radius: 8px;
 }
