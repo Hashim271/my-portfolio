@@ -54,6 +54,7 @@ footer {
 .grid-item {
     padding: 15px;
     border: 3px solid black;
+    background-color:gainsboro;
 }
 
 .grid-button {
@@ -64,4 +65,26 @@ footer {
     border: solid 4px black;
     background-color: #393232;
     border-radius: 8px;
+}
+
+.grid-button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: gainsboro;
+    /*border: solid 1px black;*/
+    border-radius: 5px;
+}
+
+.mine-img {
+    width: 30px;
+}
+
+p {
+    margin-bottom: 20px;
 }
