@@ -65,7 +65,7 @@ footer {
     font-size: large;
     font-weight: bold;
     border: solid 2px black;
-    background-image: linear-gradient(to bottom right, #22403a69, #192b28);
+    background-image: linear-gradient(to bottom right, #192b28, #22403a69);
     border-radius: 8px;
 }
 

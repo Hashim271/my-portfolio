@@ -5,7 +5,7 @@ buttons.forEach(button => {
     button.addEventListener('click', function () {
         // The corresponding dropdown content
         const dropdownContent = this.nextElementSibling;
-        
+
         // Toggle visibility of the dropdown content
         if (dropdownContent.style.display === 'block') {
             dropdownContent.style.display = 'none'; // Hide the content if it's already visible
@@ -48,13 +48,16 @@ function validateMinLength(value, minLength) {
 }
 
 //Make sure all input are good before submitting
-form.addEventListener('submit', function (e){
+form.addEventListener('submit', function (e) {
+
+    e.preventDefault();
+
     const emailValue = emailInput.value;
     const subjectInput = document.getElementById('subject');
     const commentInput = document.getElementById('comment');
     let isValid = true;
 
-    if(!validateEmail(emailValue)) {
+    if (!validateEmail(emailValue)) {
         alert('Please enter a valid email address!');
         isValid = false;
     }
@@ -65,11 +68,12 @@ form.addEventListener('submit', function (e){
     }
 
     if (!validateMinLength(commentInput.value, 5)) {
-        alert('Comment needs to be at least 5 characters long to avoid spam!')
+        alert('Comment needs to be at least 5 characters long to avoid spam!');
         isValid = false;
     }
 
-    if (!isValid) {
-        e.preventDefault();
+    if (isValid) {
+        alert('Form Submitted!');
+        this.submit();
     }
 });
