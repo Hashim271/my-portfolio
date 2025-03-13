@@ -96,23 +96,23 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <form action="#" method="post">
+        <form action="#" method="post" id="form">
 
             <!--First Name-->
             <label for="name">Name: </label>
-            <input type="text" name="name" id="name"><br><br>
+            <input type="text" name="name" id="name" placeholder="John Doe" required><br><br>
 
             <!--Email-->
             <label for="email">Email: </label>
-            <input type="email" name="email" id="email"><br><br>
+            <input type="email" name="email" id="email" placeholder="john.doe@example.com"><br><br>
 
             <!--Subject-->
             <label for="subject">Subject:  </label>
-            <input type="text" name="subject" id="subject"><br><br>
+            <input type="text" name="subject" id="subject" placeholder="subject title" required><br><br>
 
             <!--Comments-->
             <label for="comment">Comment: </label>
-            <textarea name="comment" id="comment" rows="7" style="width: 1775px; height: 144px;"></textarea><br><br>
+            <textarea name="comment" id="comment" rows="10" style="width: 1775px; height: 144px;" placeholder="Enter your message here!"required></textarea><br><br>
 
             <!--Submit button-->
             <input type="submit"></input>

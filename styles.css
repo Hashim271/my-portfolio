@@ -85,20 +85,12 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.349);
 }
 
-.project-img1 {
+.project-img1, .project-img3, .project-img4 {
     width: 30px;
 }
 
 .project-img2 {
     width: 40px;
-}
-
-.project-img3 {
-    width: 30px;
-}
-
-.project-img4 {
-    width: 30px;
 }
 
 p {
