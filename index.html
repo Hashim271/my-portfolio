@@ -26,8 +26,7 @@
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello, My name is <strong>Muhammad Hashim Ali</strong> and I am a <strong>Computer Programming & Analysis</strong> student at Humber Polytechnic. This is a portfolio page I have created
-            for my Web Development class and I will keep updating it as I get better at programming and get new projects. (Projects are made up!)</p>
+        <span class="auto-type"></span>
     </section>
 
     <!-- Projects Section -->
@@ -125,6 +124,21 @@
     <footer>
         <p>&copy; 2025 Muhammad Hashim Ali</p>
     </footer>
+    
+    <!--Script for typed.js-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings : ["Hello! My name is Muhammad chill guy", " Hello! My name is <span class = 'my-name'>Muhammad Hashim Ali</span>, and I am a Computer Programming and Analysis student at Humber Polytechnic. This is a portfolio page I have created for my Web Development class and I will keep updating it as I get better at programming and get new projects. (Projects are made up!)"],
+            typeSpeed : 15,
+            backSpeed : 60,
+            contentType : 'html',
+            looped : false,
+            onComplete : function(self){
+                self.cursor.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>

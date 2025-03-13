@@ -61,7 +61,7 @@ footer {
 
 .grid-button {
     float: right;
-    color: white;
+    color: black;
     font-size: large;
     font-weight: bold;
     border: solid 2px black;
@@ -71,6 +71,7 @@ footer {
 
 .grid-button:hover {
     text-decoration: underline;
+    color: white;
     cursor: pointer;
 }
 
@@ -132,6 +133,10 @@ input[type="submit"] {
     font-size: 100%;
 }
 
+input[type="submit"]:hover {
+    background-color: lightgray;
+}
+
 textarea {
     width: 100%;
     max-width: 100%;
@@ -148,4 +153,8 @@ textarea {
 
 #about {
     font-size: 150%;
+}
+
+.my-name {
+    font-weight: bold;
 }
