@@ -71,7 +71,7 @@ a:hover {
 }
 
 .to-top {
-    background-color: #1f1f1f;
+    background-color: #1f1f1fc9;
     position: fixed;
     bottom: 16px;
     right: 32px;
@@ -97,6 +97,7 @@ a:hover {
 
 .to-top:hover {
     text-decoration: none;
+    background-color: #1f1f1f;
 }
 
 /* Media Queries for Mobile Devices */
