@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="styles.css">
 
     <!-- Script -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 </head>
 
@@ -53,9 +53,19 @@
     <section id="projects" class="section projects-section">
         <div class="container">
             <h2>My Projects</h2>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-button active" data-category="all">All</button>
+                <button class="filter-button" data-category="javascript">JavaScript</button>
+                <button class="filter-button" data-category="htmlcss">HTML/CSS</button>
+                <button class="filter-button" data-category="react">React</button>
+                <button class="filter-button" data-category="python">Python</button>
+            </div>
+
             <div class="grid-container">
                 <!-- Project 1 -->
-                <article class="grid-item">
+                <article class="grid-item" data-categories="javascript,htmlcss">
                     <div class="project-header">
                         <h3>Minesweeper</h3>
                         <img src="https://e7.pngegg.com/pngimages/337/559/png-clipart-minesweeper-computer-icons-bing-maps-video-game-mines-miscellaneous-game.png"
@@ -75,7 +85,7 @@
                 </article>
 
                 <!-- Project 2 -->
-                <article class="grid-item">
+                <article class="grid-item" data-categories="java,angular">
                     <div class="project-header">
                         <h3>Currency Converter</h3>
                         <img src="https://static.vecteezy.com/system/resources/thumbnails/019/787/017/small/bitcoin-to-dollar-exchange-currency-icon-on-transparent-background-free-png.png"
@@ -94,7 +104,7 @@
                 </article>
 
                 <!-- Project 3 -->
-                <article class="grid-item">
+                <article class="grid-item" data-categories="javascript,htmlcss,react">
                     <div class="project-header">
                         <h3>Interactive Calculator</h3>
                         <img src="https://www.iconarchive.com/download/i103363/paomedia/small-n-flat/calculator.1024.png"
@@ -115,7 +125,7 @@
                 </article>
 
                 <!-- Project 4 -->
-                <article class="grid-item">
+                <article class="grid-item" data-categories="python,ai">
                     <div class="project-header">
                         <h3>AI Search Engine</h3>
                         <img src="https://png.pngtree.com/png-vector/20230407/ourmid/pngtree-deep-learning-line-icon-vector-png-image_6688986.png"
@@ -135,7 +145,7 @@
                 </article>
 
                 <!-- Project 5 -->
-                <article class="grid-item">
+                <article class="grid-item" data-categories="javascript,htmlcss">
                     <div class="project-header">
                         <h3>Element Generator</h3>
                         <img src="https://png.pngtree.com/png-vector/20230218/ourmid/pngtree-generator-line-icon-png-image_6607885.png"
@@ -155,18 +165,15 @@
                     </div>
                 </article>
 
-                <!-- Project 6 (Future Porject)-->
-                <article class="grid-item">
+                <!-- Project 6 (Future Project)-->
+                <article class="grid-item" data-categories="">
                     <div class="project-header">
                         <h3>Future Project</h3>
-                        <img src=""
-                            alt="Future Project" class="project-img">
+                        <img src="" alt="Future Project" class="project-img">
                     </div>
                     <button class="grid-button">Show More</button>
                     <div class="dropdown">
-                        <p><!-- Description of project --></p><br>
-                        <!-- <p><a href="https://github.com/darrasHumber/html-css-generator" target="_blank" rel="noopener"><strong>Github Repository</strong></a></p>
-                        <p><a href="https://darrashumber.github.io/html-css-generator/" target="_blank" rel="noopener"><strong>Live Project View</strong></a></p><br> -->
+                        <p><!-- Description of project --></p>
                         <p><strong>Technologies Used:</strong></p>
                         <ul>
                             <li>Blank</li>
@@ -193,7 +200,6 @@
 
                 <label for="subject">Subject:</label>
                 <input type="text" id="subject" name="subject" placeholder="Subject Title" required />
-
                 <label for="comment">Comment:</label>
                 <textarea id="comment" name="comment" rows="6" placeholder="Enter your message here!"
                     required></textarea>

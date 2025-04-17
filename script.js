@@ -83,4 +83,27 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    // Project Filtering
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const gridItems = document.querySelectorAll('.grid-item');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const category = this.dataset.category;
+
+            // Update active button state
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            gridItems.forEach(item => {
+                const categories = item.dataset.categories || '';
+                if (category === 'all' || categories.includes(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
 });

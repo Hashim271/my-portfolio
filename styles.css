@@ -412,3 +412,29 @@ footer {
         gap: 15px;
     }
 }
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    background-color: #ddd;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-button.active {
+    background-color: #2a7f62;
+    color: white;
+}
+
+.filter-button:hover {
+    background-color: #ccc;
+}
