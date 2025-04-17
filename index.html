@@ -2,168 +2,202 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="script.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Portfolio - Muhammad Hashim Ali</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f03ef0c32f.js" crossorigin="anonymous"></script>
-    <title>My Portfolio</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Script -->
+    <script src="script.js"></script>
+
 </head>
 
 <body>
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
-        <h1>Muhammad Hashim Ali</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container header-container">
+            <h1 class="logo">Muhammad Hashim Ali</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <span class="auto-type"></span>
+    <section id="about" class="about-section">
+        <div class="about-center">
+            <div class="about-photo">
+                <img src="https://media.licdn.com/dms/image/v2/D4E03AQED2fOtIuxUYQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1685430729917?e=1750291200&v=beta&t=0g65VC3EyzQBkK3xU8VdcuDwG4bWosvxXmiNuoDdd68"
+                    alt="Muhammad Hashim Ali" />
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <span class="auto-type"></span>
+            </div>
+        </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="grid-container">
-            <div class="grid-item">
-                <h1>Project I</h1>
-                <p class="project-name">Minesweeper <img
-                        src="https://e7.pngegg.com/pngimages/337/559/png-clipart-minesweeper-computer-icons-bing-maps-video-game-mines-miscellaneous-game.png"
-                        alt="Minesweeper" class="project-img1"></p>
-                <button class="grid-button" id="grid-butt">Show More ⮛</button>
-                <div class="dropdown">
-                    <p>This project is a remake of the amazing game called Minesweeper.<br><br><a
-                            href="https://github.com/Hashim271"><strong>Github Profile</strong></a><br><br>
-                        <strong>Technologies Used: </strong>
-                    <ul>
-                        <li>HTML</li>
-                        <li>JavaScript</li>
-                        <li>CSS</li>
-                    </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="grid-item">
-                <h1>Project II</h1>
-                <p class="project-name">Money Converter <img
-                        src="https://static.vecteezy.com/system/resources/thumbnails/019/787/017/small/bitcoin-to-dollar-exchange-currency-icon-on-transparent-background-free-png.png"
-                        alt="money conversion" class="project-img2"></p>
-                <button class="grid-button" id="grid-butt">Show More ⮛</button>
-                <div class="dropdown">
-                    <p>This project is a Money Converter Machine.<br><br><a
-                            href="https://github.com/Hashim271"><strong>Github Profile</strong></a><br><br>
-                        <strong>Technologies Used: </strong>
-                    <ul>
-                        <li>Java</li>
-                        <li>Angular</li>
-                    </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="grid-item">
-                <h1>Project III</h1>
-                <p class="project-name">Interactive calculator <img
-                        src="https://www.iconarchive.com/download/i103363/paomedia/small-n-flat/calculator.1024.png"
-                        alt="calculator" class="project-img3"></p>
-                <button class="grid-button" id="grid-butt">Show More ⮛</button>
-                <div class="dropdown">
-                    <p>This project is an Interactive Calculator.<br><br><a
-                            href="https://github.com/Hashim271"><strong>Github Profile</strong></a><br><br>
-                        <strong>Technologies Used: </strong>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>React</li>
-                    </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="grid-item">
-                <h1>Project IV</h1>
-                <p class="project-name">AI search engine <img
-                        src="https://png.pngtree.com/png-vector/20230407/ourmid/pngtree-deep-learning-line-icon-vector-png-image_6688986.png"
-                        alt="AI" class="project-img4"></p>
-                <button class="grid-button" id="grid-butt">Show More ⮛</button>
-                <div class="dropdown">
-                    <p>This project is an AI Search Engine.<br><br><a href="https://github.com/Hashim271"><strong>Github
-                                Profile</strong></a><br><br> <strong>Technologies Used: </strong>
-                    <ul>
-                        <li>Python</li>
-                        <li>Machine Learning</li>
-                        <li>AI</li>
-                    </ul>
-                    </p>
-                </div>
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="grid-container">
+                <!-- Project 1 -->
+                <article class="grid-item">
+                    <div class="project-header">
+                        <h3>Minesweeper</h3>
+                        <img src="https://e7.pngegg.com/pngimages/337/559/png-clipart-minesweeper-computer-icons-bing-maps-video-game-mines-miscellaneous-game.png"
+                            alt="Minesweeper" class="project-img" />
+                    </div>
+                    <button class="grid-button">Show More</button>
+                    <div class="dropdown">
+                        <p>A remake of the classic Minesweeper game.</p><br>
+                        <p><a href="https://github.com/Hashim271" target="_blank" rel="noopener"><strong>Github Profile</strong></a></p><br>
+                        <p><strong>Technologies Used:</strong></p>
+                        <ul>
+                            <li>HTML</li>
+                            <li>JavaScript</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="grid-item">
+                    <div class="project-header">
+                        <h3>Currency Converter</h3>
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/019/787/017/small/bitcoin-to-dollar-exchange-currency-icon-on-transparent-background-free-png.png"
+                            alt="Money Converter" class="project-img" />
+                    </div>
+                    <button class="grid-button">Show More</button>
+                    <div class="dropdown">
+                        <p>A Currency Converter Machine.</p><br>
+                        <p><a href="https://github.com/Hashim271" target="_blank" rel="noopener"><strong>Github Profile</strong></a></p><br>
+                        <p><strong>Technologies Used:</strong></p>
+                        <ul>
+                            <li>Java</li>
+                            <li>Angular</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="grid-item">
+                    <div class="project-header">
+                        <h3>Interactive Calculator</h3>
+                        <img src="https://www.iconarchive.com/download/i103363/paomedia/small-n-flat/calculator.1024.png"
+                            alt="Calculator" class="project-img" />
+                    </div>
+                    <button class="grid-button">Show More</button>
+                    <div class="dropdown">
+                        <p>An interactive calculator app.</p><br>
+                        <p><a href="https://github.com/Hashim271" target="_blank" rel="noopener"><strong>Github Profile</strong></a></p><br>
+                        <p><strong>Technologies Used:</strong></p>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="grid-item">
+                    <div class="project-header">
+                        <h3>AI Search Engine</h3>
+                        <img src="https://png.pngtree.com/png-vector/20230407/ourmid/pngtree-deep-learning-line-icon-vector-png-image_6688986.png"
+                            alt="AI Search Engine" class="project-img" />
+                    </div>
+                    <button class="grid-button">Show More</button>
+                    <div class="dropdown">
+                        <p>An AI-powered search engine.</p><br>
+                        <p><a href="https://github.com/Hashim271" target="_blank" rel="noopener"><strong>Github Profile</strong></a></p><br>
+                        <p><strong>Technologies Used:</strong></p>
+                        <ul>
+                            <li>Python</li>
+                            <li>Machine Learning</li>
+                            <li>AI</li>
+                        </ul>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="#" method="post" id="form">
+    <section id="contact" class="section contact-section">
+        <div class="container contact-container">
+            <h2>Contact Me</h2>
+            <form action="#" method="post" id="form" novalidate>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
 
-            <!--First Name-->
-            <label for="name">Name: </label>
-            <input type="text" name="name" id="name" placeholder="John Doe" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="john.doe@example.com" required />
 
-            <!--Email-->
-            <label for="email">Email: </label>
-            <input type="email" name="email" id="email" placeholder="john.doe@example.com"><br><br>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject Title" required />
 
-            <!--Subject-->
-            <label for="subject">Subject: </label>
-            <input type="text" name="subject" id="subject" placeholder="Subject Title" required><br><br>
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" rows="6" placeholder="Enter your message here!"
+                    required></textarea>
 
-            <!--Comments-->
-            <label for="comment">Comment: </label>
-            <textarea name="comment" id="comment" rows="10" style="width: 1775px; height: 144px;"
-                placeholder="Enter your message here!" required></textarea><br><br>
-
-            <!--Submit button-->
-            <input type="submit"></input>
-
-        </form>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
     </section>
-    <br><br><br>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Muhammad Hashim Ali</p>
+        <div class="container footer-container">
+            <p>&copy; 2025 Muhammad Hashim Ali</p>
+            <div class="social-links">
+                <a href="https://github.com/Hashim271" target="_blank" rel="noopener" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+            </div>
+        </div>
     </footer>
 
-    <a href="#" class="to-top">
+    <!-- Scroll to Top Button -->
+    <a href="#" class="to-top" aria-label="Scroll to top">
         <i class="fas fa-chevron-up"></i>
     </a>
 
-    <!--Script for typed.js-->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>"></script>
-    <script>
-        var typed = new Typed(".auto-type", {
-            strings: ["Hello! My name is Muhammad chill guy", " Hello! My name is <span class = 'my-name'>Muhammad Hashim Ali</span>, and I am a Computer Programming and Analysis student at Humber Polytechnic. This is a portfolio page I have created for my Web Development class and I will keep updating it as I get better at programming and get new projects. (Projects are made up!)"],
-            typeSpeed: 10,
-            backSpeed: 45,
-            contentType: 'html',
-            looped: false,
-            onComplete: function (self) {
-                self.cursor.style.display = 'none';
-            }
-        });
-    </script>
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-    <!--Script for Scroll up button-->
+    <!-- Custom Scripts -->
     <script src="scrollTop.js"></script>
 
+    <script>
+        const typed = new Typed(".auto-type", {
+            strings: [
+                "Hello! My name is Muhammad Hashim Ali.",
+                "I'm a Computer Programming and Analysis student at Humber Polytechnic. This portfolio showcases my projects and growth in programming."
+            ],
+            typeSpeed: 35,
+            backSpeed: 40,
+            loop: false,
+            showCursor: true,
+            cursorChar: " ",
+            onComplete: (self) => {
+                self.cursor.style.display = "none";
+            },
+        });
+    </script>
 </body>
 
 </html>

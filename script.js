@@ -1,79 +1,86 @@
-// JavaScript to toggle the dropdown content when the button is clicked
-const buttons = document.querySelectorAll('.grid-button');
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.grid-button').forEach(button => {
+        button.addEventListener('click', function () {
+            const dropdown = this.nextElementSibling;
+            const isOpen = dropdown.classList.contains('open');
 
-buttons.forEach(button => {
-    button.addEventListener('click', function () {
-        // The corresponding dropdown content
-        const dropdownContent = this.nextElementSibling;
+            // Close all other dropdowns
+            document.querySelectorAll('.dropdown').forEach(d => {
+                if (d !== dropdown) { // Prevent closing the current dropdown
+                    d.classList.remove('open');
+                    if (d.previousElementSibling && d.previousElementSibling.classList.contains('grid-button')) {
+                        d.previousElementSibling.textContent = 'Show More';
+                    }
+                }
+            });
 
-        // Toggle visibility of the dropdown content
-        if (dropdownContent.style.display === 'block') {
-            dropdownContent.style.display = 'none'; // Hide the content if it's already visible
-            this.textContent = "Show More ⮛"; // Change button text to "Show More"
-        } else {
-            dropdownContent.style.display = 'block'; // Show the content if it's hidden
-            this.textContent = "Hide ⮘"; // Change button text to "Hide"
-        }
+            if (!isOpen) {
+                dropdown.classList.add('open');
+                this.textContent = 'Hide';
+            } else {
+                dropdown.classList.remove('open');
+                this.textContent = 'Show More';
+            }
+        });
     });
-});
 
-//Make sure the name input only accepts letters and no numbers
-const nameInput = document.getElementById('name');
-
-nameInput.addEventListener('input', function (e) {
-    const inputValue = e.target.value;
-
-    if (/\d/.test(inputValue)) {
-        alert('Numbers are not allowed in the name field! Please enter a valid name.');
-
-        e.target.value = inputValue.replace(/\d/g, '');
-
-        e.preventDefault();
-        return;
-    }
-});
-
-//Make sure the email input is valid
-const emailInput = document.getElementById('email');
-const form = document.getElementById('form');
-
-function validateEmail(email) {
-    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailValid.test(email);
-}
-
-//Make sure that the subject input and the comment section is of minimum 5 char to avoid spam.
-function validateMinLength(value, minLength) {
-    return value.trim().length >= minLength;
-}
-
-//Make sure all input are good before submitting
-form.addEventListener('submit', function (e) {
-
-    e.preventDefault();
-
-    const emailValue = emailInput.value;
-    const subjectInput = document.getElementById('subject');
-    const commentInput = document.getElementById('comment');
-    let isValid = true;
-
-    if (!validateEmail(emailValue)) {
-        alert('Please enter a valid email address!');
-        isValid = false;
+    // Name input validation - no numbers allowed
+    const nameInput = document.getElementById('name');
+    if (nameInput) {
+        nameInput.addEventListener('input', e => {
+            const val = e.target.value;
+            if (/\d/.test(val)) {
+                alert('Numbers are not allowed in the name field! Please enter a valid name.');
+                e.target.value = val.replace(/\d/g, '');
+            }
+        });
     }
 
-    if (!validateMinLength(subjectInput.value, 3)) {
-        alert('Subject needs to be at least 3 characters long to avoid spam!');
-        isValid = false;
+    // Email validation regex
+    const emailInput = document.getElementById('email');
+    const form = document.getElementById('form');
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
     }
 
-    if (!validateMinLength(commentInput.value, 5)) {
-        alert('Comment needs to be at least 5 characters long to avoid spam!');
-        isValid = false;
+    function validateMinLength(value, minLength) {
+        return value.trim().length >= minLength;
     }
 
-    if (isValid) {
-        alert('Form Submitted!');
-        this.submit();
+    if (form) {
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            let valid = true;
+            const emailVal = emailInput.value.trim();
+            const subjectVal = document.getElementById('subject').value.trim();
+            const commentVal = document.getElementById('comment').value.trim();
+
+            if (!validateEmail(emailVal)) {
+                alert('Please enter a valid email address!');
+                valid = false;
+            }
+
+            if (!validateMinLength(subjectVal, 3)) {
+                alert('Subject needs to be at least 3 characters long to avoid spam!');
+                valid = false;
+            }
+
+            if (!validateMinLength(commentVal, 5)) {
+                alert('Comment needs to be at least 5 characters long to avoid spam!');
+                valid = false;
+            }
+
+            if (valid) {
+                alert('Form Submitted!');
+                // Optionally clear the form fields here
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('subject').value = '';
+                document.getElementById('comment').value = '';
+            }
+        });
     }
 });
